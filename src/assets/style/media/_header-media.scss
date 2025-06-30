@@ -1,0 +1,32 @@
+@use "../vars" as *;
+
+@media screen and (max-width: 1091px) {
+  .header__inner {
+    position: relative;
+  }
+  .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    z-index: 2;
+    transform: translateX(400%);
+    transition: transform $animation-sec ease-in-out;
+    width: 100%;
+    background: #fff;
+  }
+  .header__nav-active {
+    transform: translateX(0);
+    height: 100vh;
+  }
+  .burger {
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 1091px) {
+  .burger-wrapper {
+    display: none;
+  }
+}

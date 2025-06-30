@@ -1,0 +1,19 @@
+@use "./vars" as *;
+
+@mixin black-button {
+  background-color: $black;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 400;
+  font-size: $p-desk;
+  line-height: 68px;
+  text-align: center;
+  height: 68px;
+  width: 100%;
+  border: 1px solid $black;
+  transition: background-color $hover-btn ease-in-out, color $hover-btn ease-in-out;
+  &:hover{
+      background-color: #fff;
+      color: $black;
+  }
+}

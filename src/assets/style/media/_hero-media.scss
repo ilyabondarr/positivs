@@ -1,0 +1,26 @@
+@use "../vars" as *;
+
+@media screen and (max-width: 1091px){
+    .hero__mobile-img{
+        display: block;
+    }
+     .hero__img{
+        display: none;
+    }
+      .hero__flex{
+        display: block;
+    }
+}
+@media screen and (min-width: 1091px){
+     .hero__mobile-img{
+        display: none;
+    }
+    .hero__img{
+        display: block;
+    }
+}
+@media screen and (max-width: 425px){
+    .hero__button-link{
+        max-width: 100%;
+    }
+}

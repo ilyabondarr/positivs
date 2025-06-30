@@ -1,0 +1,65 @@
+@use "./vars" as *;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+body {
+  font-family: "SpaceGrotesk";
+}
+img {
+  max-width: 100%;
+}
+p {
+  display: block;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: $h1-mob;
+  }
+  h2 {
+    font-size: $h2-mob;
+  }
+  h3 {
+    font-size: $h3-mob;
+  }
+  h4 {
+    font-size: $h4-mob;
+  }
+  p {
+    font-size: $p-mob;
+  }
+}
+@media (min-width: 767px) and (max-width: 1091px) {
+  h1 {
+    font-size: $h1-table;
+  }
+  h2 {
+    font-size: $h2-table;
+  }
+  h3 {
+    font-size: $h3-table;
+  }
+}
+@media (min-width: 1091px) {
+  h1 {
+    font-size: $h1-desk;
+  }
+  h2 {
+    font-size: $h2-desk;
+  }
+  h3 {
+    font-size: $h3-desk;
+  }
+  h4 {
+    font-size: $h4-desk;
+  }
+  p {
+    font-size: $p-desk;
+  }
+}

@@ -1,0 +1,18 @@
+@use "fonts";
+@use "header";
+@use "./media/header-media";
+@use "./sections/hero";
+@use "./media/hero-media";
+@use "normalize";
+
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper{
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
