@@ -2,9 +2,11 @@
 @use "../mixins" as *;
 
 .hero {
+  margin-bottom: $mb-section;
   &__flex {
     display: flex;
     column-gap: 108px;
+    margin-bottom: 70px;
   }
   &__title {
     font-weight: 500;
@@ -45,4 +47,7 @@
   &__button-link:hover:before {
     left: 100%;
   }
+}
+.heroSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
 }

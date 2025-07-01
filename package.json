@@ -53,6 +53,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
+    "swiper": "^11.2.10",
     "terser-webpack-plugin": "^5.3.9"
   },
   "browserslist": [

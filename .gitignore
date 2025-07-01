@@ -2,6 +2,4 @@ node_modules
 webpack.config.js
 WEBPACK_GIUDE.md 
 postcss.config.js
-package.json
-package-lock.json
 .stylelintrc.json
