@@ -4,6 +4,7 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
+import gsap from "gsap";
 
 document.addEventListener("DOMContentLoaded", function () {
   //header
@@ -71,4 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     swiperMobileHero.destroy(true, true);
   }
+  
 });

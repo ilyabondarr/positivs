@@ -1,8 +1,11 @@
 @use "fonts";
 @use "header";
+@use "vars" as *;
 @use "./media/header-media";
 @use "./sections/hero";
 @use "./media/hero-media";
+@use "./sections/services";
+@use "./media/services-media";
 @use "normalize";
 
 
@@ -11,8 +14,33 @@
   padding: 0 15px;
   margin: 0 auto;
 }
-.wrapper{
+.wrapper {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+}
+.sections-title {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+  h2 {
+    font-weight: 500;
+    background: $green;
+    padding: 0 7px;
+    border-radius: 7px;
+  }
+  p{
+    max-width: 580px;
+  }
+}
+@media (max-width: 767px){
+    .sections-title{
+      flex-direction: column;
+      row-gap: 20px;
+      justify-content: center;
+      p{
+        text-align: center;
+      }
+    }
 }

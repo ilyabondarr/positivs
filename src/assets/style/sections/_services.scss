@@ -1,0 +1,75 @@
+@use "../vars" as *;
+
+.services {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+.services-item {
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 45px;
+  border: 1px solid $dark;
+  box-shadow: 0 5px 0 0 $dark;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 93px;
+    padding: 0 7px;
+    border-radius: 7px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    color: $black;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+  &__link-black{
+   color: $black; 
+  }
+   &__link-grey{
+   color: $grey; 
+  }
+}
+.services-grey {
+  background: $grey;
+}
+.services-green {
+  background: $green;
+}
+.services-black {
+  background: $dark;
+}
+.services-item__green-title {
+  background: $green;
+}
+.services-item__white-title {
+  background: $grey;
+}
+
+.services-item__link {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.services-item__link-img {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.services-item__link:hover {
+  gap: 0;
+}
+
+.services-item__link:hover .services-item__link-img {
+  transform: translateX(calc(100% + 115px)) rotate(360deg);
+}
