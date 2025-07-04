@@ -1,0 +1,45 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.banner-proposal {
+    margin-bottom: $mb-section;
+  &__inner {
+    border-radius: 45px;
+    padding: 60px;
+    background: $grey;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__inner::after{
+    content: "";
+    display: block;
+    background-image: url("../images/banner-proposal1.png");
+    max-width: 359px;
+    width: 100%;
+    height: 105%;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: -12px;
+    right: 60px;
+  }
+  &__half {
+    
+  }
+  h3 {
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 26px;
+  }
+  p {
+    margin-bottom: 26px;
+    max-width: 500px;
+  }
+  &__link-button {
+    @include black-button;
+    max-width: 288px;
+  }
+  &__img {
+    display: none;
+  }
+}

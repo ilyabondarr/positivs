@@ -1,0 +1,34 @@
+@use "../vars" as *;
+
+@media (min-width: 912px) {
+  .cases__text-block {
+    flex-shrink: 1 !important;
+  }
+}
+@media (max-width: 912px) {
+  .cases__banner {
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .cases__text-block {
+    border-radius: 45px;
+    padding: 40px;
+    background: $dark;
+  }
+}
+@media (max-width: 425px) {
+  .cases__text-block {
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .cases__link {
+    font-size: $p-mob;
+  }
+  .cases__link::after {
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+  }
+}

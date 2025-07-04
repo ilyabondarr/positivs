@@ -1,6 +1,7 @@
 @use "../vars" as *;
 
 .services {
+  margin-bottom: $mb-section;
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

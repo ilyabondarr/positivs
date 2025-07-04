@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       320: {
-         slidesPerView: 3,
+        slidesPerView: 3
       },
       767: {
-        slidesPerView: 4,
+        slidesPerView: 4
       },
       1091: {
-        slidesPerView: 6,
+        slidesPerView: 6
       }
     },
     speed: 8000,
@@ -56,21 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: {
       enabled: true,
       delay: 1,
-      reverseDirection: true,
+      reverseDirection: true
     },
-     breakpoints: {
+    breakpoints: {
       320: {
-         slidesPerView: 3,
+        slidesPerView: 3
       }
     },
     speed: 8000,
     loop: true
   });
 
-  if (window.innerWidth  <= 767) {
+  if (window.innerWidth <= 767) {
     swiperMobileHero.init();
   } else {
     swiperMobileHero.destroy(true, true);
   }
-  
+
+  const swiperCases = new Swiper(".casesSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    slidesPerView: 1.1,
+    autoHeight: true,
+  });
+  window.innerWidth <= 911 ? swiperCases.init() : swiperCases.destroy(true, true);
 });

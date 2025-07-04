@@ -1,0 +1,46 @@
+@use "../vars" as *;
+
+.cases {
+    margin-bottom: $mb-section;
+  &__inner {
+  }
+
+  &__banner {
+    border-radius: 45px;
+    padding: 70px 0;
+    width: 100%;
+    background: $dark;
+    display: flex;
+  }
+
+  &__text-block {
+    padding: 0 60px;
+    p {
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+  }
+  &__text-block:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    line-height: 140%;
+    color: $green;
+    display: inline-block;
+  }
+  &__link::after {
+    content: "";
+    background-image: url("../images/learn-more-icon.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4px;
+    right: -30px;
+    width: 21px;
+    height: 20px;
+  }
+}

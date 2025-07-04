@@ -1,0 +1,27 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+@media (max-width: 1007px) {
+  .banner-proposal__inner::after {
+    max-width: 237px;
+    height: 74%;
+    background-size: contain;
+    top: 49px;
+    right: 30px;
+  }
+  .banner-proposal {
+    &__inner {
+      padding: 30px;
+    }
+  }
+}
+@media (max-width: 826px) {
+  .banner-proposal__inner::after {
+    display: none;
+  }
+}
+@media (max-width: 425px){
+    .banner-proposal__link-button{
+        max-width: 100%;
+    }
+}

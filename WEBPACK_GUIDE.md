@@ -298,3 +298,6 @@ src/assets/fonts/
 
 ---
 *Последнее обновление: $(date)* 
+
+git pull --rebase origin main
+git push origin main

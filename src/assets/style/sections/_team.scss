@@ -1,0 +1,71 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.team {
+  margin-bottom: $mb-section;
+  &__inner {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__link-btn {
+    @include black-button;
+    max-width: 269px;
+    margin-left: auto;
+  }
+}
+.sections-title {
+}
+.team-item {
+  box-shadow: 0 5px 0 0 $dark;
+  background: #fff;
+  border: 1px solid $dark;
+  border-radius: 45px;
+  padding: 40px 35px;
+  max-width: 387px;
+  &__content {
+  }
+
+  &__top {
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+    align-items: flex-end;
+    padding-bottom: 28px;
+    border-bottom: 1px solid $black;
+    margin-bottom: 28px;
+  }
+  &__img {
+    max-width: 97px;
+    border-radius: 50%;
+    height: 97px;
+    object-fit: cover;
+  }
+  &__icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 34px;
+  }
+  &__text-block {
+  }
+
+  &__name {
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__job {
+    font-weight: 400;
+    font-size: 18px;
+    color: $black;
+  }
+
+  &__info {
+  }
+}

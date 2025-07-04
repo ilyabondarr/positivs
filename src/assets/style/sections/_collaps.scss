@@ -1,0 +1,118 @@
+@use "../vars" as *;
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  border: 1px solid $dark;
+  border-radius: 45px;
+  padding: 41px 60px;
+  width: 100%;
+  transition: background 0.35s, box-shadow 0.35s;
+  height: 159px;
+  box-shadow: 0 5px 0 0 $dark;
+  background: $grey;
+  cursor: pointer;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  padding: 0;
+  border-radius: 0 0 45px 45px;
+  transition: border 0.35s;
+  transition: max-height 0.35s, padding 0.35s,box-shadow 0.35s;
+}
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 0 0 41px 0;
+  background-color: $green;
+  box-shadow: 0 5px 0 0 $dark;
+}
+.tab-content p {
+  max-width: 89%;
+  margin: 0 auto;
+  border-top: 1px solid $black;
+  padding-top: 31px;
+  transition: padding 0.35s;
+  
+}
+.tab input:checked ~ label {
+  background-color: $green;
+  box-shadow: none;
+  border-radius: 45px 45px 0 0;
+  border: none;
+}
+
+.tab__number {
+  font-weight: 500;
+  font-size: 60px;
+}
+.tab__title {
+  font-weight: 500;
+}
+.tab__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab__left {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+}
+.tab__right {
+  width: 58px;
+  background-color: $grey;
+  height: 58px;
+  border: 1px solid $black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.tab__cross {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+}
+
+.tab__cross::before,
+.tab__cross::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 24px;
+  height: 5px;
+  background: #000;
+}
+
+.tab__cross::before {
+  transform: rotate(0deg);
+}
+
+.tab__cross::after {
+  transform: rotate(-90deg);
+  transition: transform 0.35s;
+}
+.tab input:checked ~ label .tab__cross::after {
+  transform: rotate(0deg);
+}
+.collapsible-section{
+  margin-bottom: $mb-section;
+}

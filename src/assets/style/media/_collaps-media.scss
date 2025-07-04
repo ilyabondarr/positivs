@@ -1,0 +1,32 @@
+@use "../vars" as *;
+
+@media (max-width: 767px) {
+  .tab__right {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+  }
+  .tab__cross {
+    top: 10px;
+    width: 24px;
+    right: 11px;
+  }
+  .tab__number {
+    font-size: 45px;
+  }
+  .tab label {
+    padding: 41px 30px;
+  }
+}
+@media (max-width: 425px) {
+  .tab label {
+    padding: 20px 10px;
+  }
+  .tab__number {
+    font-size: 30px;
+  }
+  .tab__left h3 {
+    font-size: 20px;
+  }
+}

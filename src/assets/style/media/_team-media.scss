@@ -1,0 +1,36 @@
+@use "../vars" as *;
+
+@media (max-width: 768px) {
+  .team {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
+  .team-item {
+    max-width: 100%;
+    padding: 30px 25px;
+    
+    &__figure {
+      .team-item__img {
+        // Уменьшаем размер для мобильных устройств
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .team-item {
+    padding: 20px 15px;
+    
+    &__figure {
+      .team-item__img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
